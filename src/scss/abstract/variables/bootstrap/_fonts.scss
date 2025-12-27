@@ -1,0 +1,31 @@
+// Serenity Typography
+// Elegant, readable fonts for a calm, natural aesthetic
+
+// Body font - Clean, modern sans-serif
+$font-family-base: "Lato", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+// Headings - Elegant serif for a refined look
+$headings-font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+$headings-font-weight: 400;
+
+// Base font size and line height for readability
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Heading sizes - slightly larger for impact
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// Letter spacing for headings
+$headings-letter-spacing: -0.02em;

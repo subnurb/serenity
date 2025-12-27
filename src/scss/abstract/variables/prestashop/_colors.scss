@@ -1,0 +1,89 @@
+// Serenity Theme - PrestaShop Component Colors
+
+// General colors
+$default-icon-color: $serenity-stone;
+
+// Footer - Warm, earthy tones instead of harsh dark
+$footer-background-color: $serenity-charcoal;
+$footer-heading-color: $serenity-cream;
+$footer-text-color: $serenity-clay;
+$footer-link-color: $serenity-sand;
+$footer-link-hover-color: $serenity-sage;
+
+// Email subscriptions
+$email-input-color: $serenity-charcoal;
+$email-input-border-color: $serenity-clay;
+$email-input-bg: white;
+$email-input-focus-border-color: $serenity-sage;
+
+// Product cards
+$product-card-bg: white;
+$product-card-border-color: transparent;
+$product-card-hover-shadow: 0 0.5rem 2rem rgba($serenity-night, 0.08);
+$product-title-color: $serenity-charcoal;
+$product-price-color: $serenity-charcoal;
+$product-price-discount-color: $serenity-danger;
+$product-price-regular-color: $serenity-fog;
+
+// Wishlist
+$wishlist-icon-color: $serenity-rose;
+$wishlist-icon-active-color: darken($serenity-rose, 15%);
+
+// Rating stars
+$rating-star-color: $serenity-honey;
+$rating-star-empty-color: $serenity-sand;
+
+// Sale/Discount badges
+$badge-sale-bg: $serenity-rose;
+$badge-sale-color: white;
+$badge-new-bg: $serenity-sage;
+$badge-new-color: white;
+$badge-pack-bg: $serenity-sky;
+$badge-pack-color: white;
+
+// Cart
+$cart-icon-color: $serenity-charcoal;
+$cart-badge-bg: $serenity-sage;
+$cart-badge-color: white;
+
+// Header
+$header-bg: white;
+$header-border-color: $serenity-sand;
+$header-text-color: $serenity-charcoal;
+
+// Search
+$search-input-bg: $serenity-pearl;
+$search-input-border-color: transparent;
+$search-input-focus-border-color: $serenity-sage;
+$search-icon-color: $serenity-stone;
+
+// Navigation menu
+$menu-bg: transparent;
+$menu-link-color: $serenity-charcoal;
+$menu-link-hover-color: $serenity-sage-dark;
+$menu-dropdown-bg: white;
+$menu-dropdown-shadow: 0 0.5rem 1.5rem rgba($serenity-night, 0.1);
+
+// Faceted search / Filters
+$filter-title-color: $serenity-charcoal;
+$filter-link-color: $serenity-stone;
+$filter-link-hover-color: $serenity-sage-dark;
+$filter-active-color: $serenity-sage;
+$filter-checkbox-color: $serenity-sage;
+
+// Pagination
+$pagination-bg: white;
+$pagination-border-color: $serenity-sand;
+$pagination-color: $serenity-charcoal;
+$pagination-hover-bg: $serenity-pearl;
+$pagination-active-bg: $serenity-sage;
+$pagination-active-color: white;
+
+// Tabs
+$tab-border-color: $serenity-sand;
+$tab-active-color: $serenity-sage;
+$tab-text-color: $serenity-stone;
+
+// Social icons
+$social-icon-color: $serenity-stone;
+$social-icon-hover-color: $serenity-sage;

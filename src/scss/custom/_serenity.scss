@@ -1,0 +1,689 @@
+// ============================================
+// SERENITY THEME CUSTOM STYLES
+// Slow Life, Natural Look Aesthetic
+// ============================================
+
+// Global transitions - slower, more deliberate for calm feel
+$serenity-transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+$serenity-transition-slow: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+// ============================================
+// BODY & GLOBAL STYLES
+// ============================================
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Elegant headings with serif font
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  letter-spacing: -0.02em;
+  color: $serenity-charcoal;
+}
+
+// ============================================
+// BUTTONS - Soft, inviting
+// ============================================
+
+.btn {
+  transition: $serenity-transition;
+  border-radius: $border-radius;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($serenity-sage, 0.25);
+  }
+}
+
+.btn-primary {
+  background-color: $serenity-sage;
+  border-color: $serenity-sage;
+  color: white;
+
+  &:hover,
+  &:focus {
+    background-color: $serenity-sage-dark;
+    border-color: $serenity-sage-dark;
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    background-color: darken($serenity-sage-dark, 5%);
+    transform: translateY(0);
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: $serenity-clay;
+  color: $serenity-charcoal;
+
+  &:hover,
+  &:focus {
+    background-color: $serenity-pearl;
+    border-color: $serenity-stone;
+    color: $serenity-charcoal;
+  }
+}
+
+.btn-outline-primary {
+  border-color: $serenity-sage;
+  color: $serenity-sage-dark;
+
+  &:hover,
+  &:focus {
+    background-color: $serenity-sage;
+    border-color: $serenity-sage;
+    color: white;
+  }
+}
+
+// ============================================
+// CARDS - Subtle, elegant
+// ============================================
+
+.card {
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 2px 8px rgba($serenity-night, 0.04);
+  transition: $serenity-transition;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba($serenity-night, 0.08);
+  }
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom-color: $serenity-sand;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top-color: $serenity-sand;
+}
+
+// ============================================
+// PRODUCT MINIATURE - Natural feel
+// ============================================
+
+.product-miniature {
+  .card {
+    background-color: white;
+    border: none;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    transition: $serenity-transition;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba($serenity-night, 0.1);
+    }
+  }
+
+  &__image-container {
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    transition: $serenity-transition-slow;
+  }
+
+  &__link:hover &__image {
+    transform: scale(1.05);
+  }
+
+  &__title {
+    font-family: $headings-font-family;
+    font-weight: 400;
+    color: $serenity-charcoal;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  &__price {
+    color: $serenity-charcoal;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  &__regular-price {
+    color: $serenity-fog;
+    text-decoration: line-through;
+  }
+
+  &__discount-percentage {
+    background-color: $serenity-rose;
+    color: white;
+    border-radius: $border-radius-sm;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+// ============================================
+// HEADER - Clean, minimal
+// ============================================
+
+.header-top {
+  background-color: $serenity-pearl;
+  border-bottom: 1px solid $serenity-sand;
+}
+
+.header-bottom {
+  background-color: white;
+  border-bottom: 1px solid $serenity-sand;
+}
+
+// Logo area
+#header .logo {
+  max-height: 60px;
+}
+
+// ============================================
+// NAVIGATION - Elegant, understated
+// ============================================
+
+.top-menu {
+  a {
+    color: $serenity-charcoal;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: $serenity-transition;
+
+    &:hover {
+      color: $serenity-sage-dark;
+    }
+  }
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: 0 8px 32px rgba($serenity-night, 0.12);
+  padding: 0.75rem 0;
+
+  .dropdown-item {
+    padding: 0.625rem 1.25rem;
+    color: $serenity-charcoal;
+    transition: $serenity-transition;
+
+    &:hover {
+      background-color: $serenity-pearl;
+      color: $serenity-sage-dark;
+    }
+
+    &.active,
+    &:active {
+      background-color: $serenity-sage;
+      color: white;
+    }
+  }
+}
+
+// ============================================
+// SEARCH - Clean input
+// ============================================
+
+.search-widget {
+  input[type="search"],
+  .js-search-input {
+    background-color: $serenity-pearl;
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    padding: 0.75rem 1rem;
+    transition: $serenity-transition;
+
+    &:focus {
+      background-color: white;
+      border-color: $serenity-sage;
+      box-shadow: 0 0 0 3px rgba($serenity-sage, 0.1);
+    }
+
+    &::placeholder {
+      color: $serenity-fog;
+    }
+  }
+}
+
+// ============================================
+// FOOTER - Warm, inviting
+// ============================================
+
+#footer {
+  background-color: $serenity-charcoal;
+  color: $serenity-clay;
+
+  h4, .h4 {
+    color: $serenity-cream;
+    font-family: $headings-font-family;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  a {
+    color: $serenity-sand;
+    transition: $serenity-transition;
+
+    &:hover {
+      color: $serenity-sage;
+    }
+  }
+
+  .footer-container {
+    border-top: 1px solid rgba($serenity-sand, 0.2);
+  }
+}
+
+// ============================================
+// FORMS - Clean, accessible
+// ============================================
+
+.form-control {
+  background-color: white;
+  border: 2px solid $serenity-sand;
+  border-radius: $border-radius;
+  padding: 0.75rem 1rem;
+  transition: $serenity-transition;
+
+  &:focus {
+    border-color: $serenity-sage;
+    box-shadow: 0 0 0 3px rgba($serenity-sage, 0.1);
+  }
+
+  &::placeholder {
+    color: $serenity-fog;
+  }
+}
+
+.form-label {
+  color: $serenity-charcoal;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+// Custom checkboxes and radios
+.form-check-input {
+  &:checked {
+    background-color: $serenity-sage;
+    border-color: $serenity-sage;
+  }
+
+  &:focus {
+    border-color: $serenity-sage;
+    box-shadow: 0 0 0 3px rgba($serenity-sage, 0.15);
+  }
+}
+
+// ============================================
+// BREADCRUMB - Subtle
+// ============================================
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 1rem 0;
+
+  &-item {
+    color: $serenity-fog;
+
+    a {
+      color: $serenity-stone;
+
+      &:hover {
+        color: $serenity-sage-dark;
+      }
+    }
+
+    &.active {
+      color: $serenity-charcoal;
+    }
+
+    + .breadcrumb-item::before {
+      color: $serenity-clay;
+    }
+  }
+}
+
+// ============================================
+// PAGINATION - Clean
+// ============================================
+
+.pagination {
+  .page-link {
+    border: 1px solid $serenity-sand;
+    color: $serenity-charcoal;
+    border-radius: $border-radius-sm;
+    margin: 0 0.125rem;
+    transition: $serenity-transition;
+
+    &:hover {
+      background-color: $serenity-pearl;
+      border-color: $serenity-clay;
+      color: $serenity-charcoal;
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: $serenity-sage;
+    border-color: $serenity-sage;
+    color: white;
+  }
+
+  .page-item.disabled .page-link {
+    color: $serenity-fog;
+    background-color: $serenity-pearl;
+  }
+}
+
+// ============================================
+// ALERTS - Soft, not harsh
+// ============================================
+
+.alert {
+  border: none;
+  border-radius: $border-radius;
+
+  &-success {
+    background-color: rgba($serenity-sage, 0.15);
+    color: darken($serenity-sage-dark, 10%);
+  }
+
+  &-info {
+    background-color: rgba($serenity-sky, 0.2);
+    color: darken($serenity-sky, 30%);
+  }
+
+  &-warning {
+    background-color: rgba($serenity-honey, 0.2);
+    color: darken($serenity-honey, 35%);
+  }
+
+  &-danger {
+    background-color: rgba($serenity-danger, 0.15);
+    color: darken($serenity-danger, 20%);
+  }
+}
+
+// ============================================
+// BADGES - Subtle
+// ============================================
+
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.75em;
+  border-radius: $border-radius-sm;
+}
+
+.product-flag {
+  background-color: $serenity-sage;
+  color: white;
+  border-radius: $border-radius-sm;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+
+  &.discount-percentage,
+  &.discount {
+    background-color: $serenity-rose;
+  }
+
+  &.new {
+    background-color: $serenity-sage;
+  }
+
+  &.pack {
+    background-color: $serenity-sky;
+  }
+
+  &.on-sale {
+    background-color: $serenity-terracotta;
+  }
+}
+
+// ============================================
+// TABS - Clean
+// ============================================
+
+.nav-tabs {
+  border-bottom-color: $serenity-sand;
+
+  .nav-link {
+    color: $serenity-stone;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.75rem 1.25rem;
+    transition: $serenity-transition;
+
+    &:hover {
+      color: $serenity-sage-dark;
+      border-color: transparent;
+    }
+
+    &.active {
+      color: $serenity-sage;
+      border-bottom-color: $serenity-sage;
+      background-color: transparent;
+    }
+  }
+}
+
+// ============================================
+// MODALS - Soft overlay
+// ============================================
+
+.modal-backdrop {
+  background-color: $serenity-night;
+
+  &.show {
+    opacity: 0.4;
+  }
+}
+
+.modal-content {
+  border: none;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 24px 48px rgba($serenity-night, 0.15);
+}
+
+.modal-header {
+  border-bottom-color: $serenity-sand;
+}
+
+.modal-footer {
+  border-top-color: $serenity-sand;
+}
+
+// ============================================
+// CART ICON - Subtle badge
+// ============================================
+
+.cart-preview {
+  .cart-products-count {
+    background-color: $serenity-sage;
+    color: white;
+    font-weight: 500;
+  }
+}
+
+// ============================================
+// WISHLIST - Heart styling
+// ============================================
+
+.wishlist-button-add,
+.wishlist-button-product {
+  color: $serenity-rose;
+  transition: $serenity-transition;
+
+  &:hover,
+  &.wishlist-button-active {
+    color: darken($serenity-rose, 20%);
+  }
+}
+
+// ============================================
+// PRODUCT PAGE SPECIFICS
+// ============================================
+
+.product-prices {
+  .current-price {
+    color: $serenity-charcoal;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .regular-price {
+    color: $serenity-fog;
+  }
+
+  .discount {
+    background-color: $serenity-rose;
+    color: white;
+    border-radius: $border-radius-sm;
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+  }
+}
+
+.product-actions {
+  .add-to-cart {
+    background-color: $serenity-sage;
+    border-color: $serenity-sage;
+    border-radius: $border-radius;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: $serenity-transition;
+
+    &:hover {
+      background-color: $serenity-sage-dark;
+      border-color: $serenity-sage-dark;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($serenity-sage, 0.3);
+    }
+  }
+}
+
+// ============================================
+// QUANTITY INPUT
+// ============================================
+
+.bootstrap-touchspin {
+  .btn {
+    background-color: $serenity-pearl;
+    border-color: $serenity-sand;
+    color: $serenity-charcoal;
+
+    &:hover {
+      background-color: $serenity-sand;
+      border-color: $serenity-clay;
+    }
+  }
+
+  input {
+    border-color: $serenity-sand;
+  }
+}
+
+// ============================================
+// SOCIAL ICONS
+// ============================================
+
+.social-sharing {
+  a {
+    color: $serenity-stone;
+    transition: $serenity-transition;
+
+    &:hover {
+      color: $serenity-sage;
+    }
+  }
+}
+
+// ============================================
+// SCROLLBAR STYLING
+// ============================================
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $serenity-pearl;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $serenity-clay;
+  border-radius: 4px;
+
+  &:hover {
+    background: $serenity-stone;
+  }
+}
+
+// ============================================
+// SELECTION STYLING
+// ============================================
+
+::selection {
+  background-color: rgba($serenity-sage, 0.3);
+  color: $serenity-charcoal;
+}
+
+::-moz-selection {
+  background-color: rgba($serenity-sage, 0.3);
+  color: $serenity-charcoal;
+}
+
+// ============================================
+// SECTION TITLES
+// ============================================
+
+.section-title {
+  font-family: $headings-font-family;
+  font-weight: 400;
+  color: $serenity-charcoal;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $serenity-sage;
+    margin-top: 0.75rem;
+  }
+}
+
+// ============================================
+// LOADING STATES
+// ============================================
+
+.spinner-border {
+  color: $serenity-sage;
+}
+
+// ============================================
+// FOCUS STATES - Accessibility
+// ============================================
+
+:focus-visible {
+  outline: 2px solid $serenity-sage;
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid $serenity-sage;
+  outline-offset: 2px;
+}

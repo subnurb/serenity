@@ -1,0 +1,196 @@
+// Bootstrap variables, maps overrides
+// Serenity Theme - Slow Life, Natural Look
+
+// ============================================
+// SERENITY COLOR PALETTE
+// Natural, calm tones for a peaceful aesthetic
+// ============================================
+
+// Base Colors - Warm neutrals inspired by nature
+$serenity-cream: #F9F7F4;
+$serenity-pearl: #F5F2ED;
+$serenity-sand: #E8E2D9;
+$serenity-clay: #C4B8A8;
+$serenity-fog: #9B928A;
+$serenity-stone: #6B635B;
+$serenity-charcoal: #3D3A37;
+$serenity-night: #2A2826;
+
+// Accent Colors - Soft, desaturated pastels
+$serenity-sage: #A8B5A0;       // Primary - calm green
+$serenity-sage-dark: #8A9B82;  // Primary hover
+$serenity-rose: #D4B8B8;       // Soft pink
+$serenity-sky: #B8C5D4;        // Calm blue
+$serenity-lavender: #C4B8D4;   // Gentle purple
+$serenity-honey: #D4C498;      // Warm gold
+$serenity-terracotta: #C4A898; // Earthy orange
+
+// Semantic Colors
+$serenity-success: #A8B5A0;    // Same as sage
+$serenity-info: #B8C5D4;       // Same as sky
+$serenity-warning: #D4C498;    // Same as honey
+$serenity-danger: #C49898;     // Muted red
+$serenity-error: #C49898;
+
+// ============================================
+// BOOTSTRAP COLOR OVERRIDES
+// ============================================
+
+// Primary colors
+$primary: $serenity-sage;
+$secondary: $serenity-stone;
+
+// Semantic colors
+$success: $serenity-success;
+$info: $serenity-info;
+$warning: $serenity-warning;
+$danger: $serenity-danger;
+
+// Light/Dark
+$light: $serenity-pearl;
+$dark: $serenity-charcoal;
+
+// Body
+$body-bg: $serenity-cream;
+$body-color: $serenity-charcoal;
+
+// Links
+$link-color: $serenity-sage-dark;
+$link-hover-color: $serenity-stone;
+$link-decoration: none;
+$link-hover-decoration: none;
+
+// ============================================
+// TYPOGRAPHY
+// ============================================
+
+// Use elegant, readable fonts
+$font-family-sans-serif: "Lato", "Segoe UI", system-ui, -apple-system, sans-serif;
+$headings-font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+$headings-font-weight: 400;
+$headings-color: $serenity-charcoal;
+
+// Slightly larger, more readable text
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+$paragraph-margin-bottom: 1.25rem;
+
+// ============================================
+// SPACING & BORDERS
+// ============================================
+
+// Softer, rounder corners for a gentle feel
+$border-radius: 0.5rem;
+$border-radius-sm: 0.375rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xl: 1rem;
+$border-radius-pill: 50rem;
+
+// Softer borders
+$border-color: $serenity-sand;
+$border-width: 1px;
+
+// More generous spacing
+$spacer: 1rem;
+
+// ============================================
+// COMPONENTS
+// ============================================
+
+// Cards - subtle elevation
+$card-bg: $serenity-pearl;
+$card-border-color: $serenity-sand;
+$card-border-radius: $border-radius-lg;
+$card-cap-bg: transparent;
+$card-cap-padding-y: 1rem;
+$card-cap-padding-x: 1.25rem;
+
+// Buttons - soft, inviting
+$btn-font-weight: 500;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-border-radius: $border-radius;
+$btn-transition: all 0.3s ease;
+$btn-focus-box-shadow: 0 0 0 0.2rem rgba($serenity-sage, 0.25);
+
+// Forms - clean and clear
+$input-bg: white;
+$input-border-color: $serenity-clay;
+$input-focus-border-color: $serenity-sage;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($serenity-sage, 0.15);
+$input-placeholder-color: $serenity-fog;
+$input-border-radius: $border-radius;
+$input-padding-y: 0.75rem;
+$input-padding-x: 1rem;
+
+// Navbar
+$navbar-light-color: $serenity-charcoal;
+$navbar-light-hover-color: $serenity-sage-dark;
+$navbar-light-active-color: $serenity-sage;
+
+// Dropdowns
+$dropdown-bg: white;
+$dropdown-border-color: $serenity-sand;
+$dropdown-border-radius: $border-radius;
+$dropdown-box-shadow: 0 0.5rem 1.5rem rgba($serenity-night, 0.1);
+$dropdown-link-color: $serenity-charcoal;
+$dropdown-link-hover-color: $serenity-charcoal;
+$dropdown-link-hover-bg: $serenity-pearl;
+$dropdown-link-active-color: white;
+$dropdown-link-active-bg: $serenity-sage;
+
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $serenity-clay;
+$breadcrumb-active-color: $serenity-stone;
+
+// Alerts
+$alert-border-radius: $border-radius;
+
+// Badges
+$badge-font-weight: 500;
+$badge-border-radius: $border-radius-sm;
+$badge-padding-y: 0.35em;
+$badge-padding-x: 0.65em;
+
+// Modals
+$modal-content-bg: white;
+$modal-content-border-color: $serenity-sand;
+$modal-content-border-radius: $border-radius-lg;
+$modal-backdrop-bg: $serenity-night;
+$modal-backdrop-opacity: 0.4;
+
+// Tables
+$table-bg: transparent;
+$table-striped-bg: rgba($serenity-sand, 0.3);
+$table-hover-bg: rgba($serenity-sand, 0.5);
+$table-border-color: $serenity-sand;
+
+// ============================================
+// BREAKPOINTS
+// ============================================
+
+$grid-breakpoints: (
+  "xxs": 0,
+  "xs": 360px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px
+);
+
+// ============================================
+// TRANSITIONS
+// ============================================
+
+$transition-base: all 0.3s ease;
+$transition-fade: opacity 0.3s ease;
+
+// Toasts
+$toast-border-width: 0;
+$toast-border-radius: $border-radius;
+$toast-background-color: white;
+
+// Carousel
+$carousel-transition-duration: 0.5s;
