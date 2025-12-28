@@ -12,7 +12,7 @@
     {/block}
   </head>
 
-  <body id="{$page.page_name}" class="{$page.body_classes|classnames}">
+  <body id="{$page.page_name}" class="sr-body sr-page-{$page.page_name} {$page.body_classes|classnames}">
     {block name='hook_after_body_opening_tag'}
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
@@ -21,38 +21,42 @@
       {include file='catalog/_partials/product-activation.tpl'}
     {/block}
 
-    <header id="header" class="header js-sticky-header">
+    <header id="header" class="sr-header header js-sticky-header">
       {block name='header'}
         {include file='_partials/header.tpl'}
       {/block}
     </header>
 
-    <main id="wrapper" class="wrapper">
+    <main id="wrapper" class="sr-main sr-wrapper wrapper">
       {hook h='displayWrapperTop'}
-      
-      {block name='breadcrumb'}
-        {include file='_partials/breadcrumb.tpl'}
-      {/block}
 
-      {block name='notifications'}
-        {include file='_partials/notifications.tpl'}
-      {/block}
+      <nav class="sr-breadcrumb-wrapper" aria-label="breadcrumb">
+        {block name='breadcrumb'}
+          {include file='_partials/breadcrumb.tpl'}
+        {/block}
+      </nav>
+
+      <div class="sr-notifications">
+        {block name='notifications'}
+          {include file='_partials/notifications.tpl'}
+        {/block}
+      </div>
 
       {block name='content_columns'}
-        <div class="{block name='container_class'}container{/block}">
-          <div class="row">
+        <div class="sr-content-container {block name='container_class'}container{/block}">
+          <div class="sr-content-row row">
             {block name='left_column'}
-              <div id="left-column" class="wrapper__left-column col-md-4 col-lg-3">
+              <aside id="left-column" class="sr-sidebar sr-sidebar-left wrapper__left-column col-md-4 col-lg-3">
                 {if $page.page_name === 'product'}
                   {hook h='displayLeftColumnProduct'}
                 {else}
                   {hook h='displayLeftColumn'}
                 {/if}
-              </div>
+              </aside>
             {/block}
 
             {block name='content_wrapper'}
-              <section id="content-wrapper" class="wrapper__content col-md-4 col-lg-6">
+              <section id="content-wrapper" class="sr-content sr-content-main wrapper__content col-md-4 col-lg-6">
                 {hook h='displayContentWrapperTop'}
                 {block name='content'}
                   <p>Hello world! This is HTML5 Boilerplate.</p>
@@ -62,13 +66,13 @@
             {/block}
 
             {block name='right_column'}
-              <div id="right-column" class="wrapper__right-column col-md-4 col-lg-3">
+              <aside id="right-column" class="sr-sidebar sr-sidebar-right wrapper__right-column col-md-4 col-lg-3">
                 {if $page.page_name === 'product'}
                   {hook h='displayRightColumnProduct'}
                 {else}
                   {hook h='displayRightColumn'}
                 {/if}
-              </div>
+              </aside>
             {/block}
           </div>
         </div>
@@ -77,7 +81,7 @@
       {hook h='displayWrapperBottom'}
     </main>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="sr-footer footer">
       {block name='footer'}
         {include file='_partials/footer.tpl'}
       {/block}

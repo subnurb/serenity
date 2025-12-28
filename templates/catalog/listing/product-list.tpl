@@ -11,20 +11,26 @@
 {block name='content'}
 
     {block name='product_list_header'}
-      <h1 id="js-product-list-header" class="h2 mb-4">{$listing.label}</h1>
+      <h1 id="js-product-list-header" class="sr-page-title sr-listing-title h2 mb-4">{$listing.label}</h1>
     {/block}
-    
-    {hook h='displayHeaderCategory'}
 
-    <section id="products">
+    <div class="sr-category-header">
+      {hook h='displayHeaderCategory'}
+    </div>
+
+    <section id="products" class="sr-products-section sr-product-listing">
       {if $listing.products|count}
 
         {block name='product_list_top'}
-          {include file='catalog/_partials/products-top.tpl' listing=$listing}
+          <div class="sr-products-toolbar sr-products-toolbar-top">
+            {include file='catalog/_partials/products-top.tpl' listing=$listing}
+          </div>
         {/block}
 
         {block name='product_list_active_filters'}
-          {$listing.rendered_active_filters nofilter}
+          <div class="sr-active-filters">
+            {$listing.rendered_active_filters nofilter}
+          </div>
         {/block}
 
         {block name='product_list'}
@@ -37,20 +43,24 @@
           {else}
             {assign var="classes" value="col-12 col-xs-6 col-lg-4 col-xl-3"}
           {/if}
-          {include file='catalog/_partials/products.tpl' listing=$listing productClass=$classes}
+          <div class="sr-products-grid">
+            {include file='catalog/_partials/products.tpl' listing=$listing productClass=$classes}
+          </div>
         {/block}
 
         {block name='product_list_bottom'}
-          {include file='catalog/_partials/products-bottom.tpl' listing=$listing}
+          <div class="sr-products-toolbar sr-products-toolbar-bottom">
+            {include file='catalog/_partials/products-bottom.tpl' listing=$listing}
+          </div>
         {/block}
 
       {else}
         <div id="js-product-list-top"></div>
 
-        <div id="js-product-list">
+        <div id="js-product-list" class="sr-no-products">
           {capture assign="errorContent"}
-            <p class="h4">{l s='No products available yet' d='Shop.Theme.Catalog'}</p>
-            <p>{l s='Stay tuned! More products will be shown here as they are added.' d='Shop.Theme.Catalog'}</p>
+            <p class="sr-no-products-title h4">{l s='No products available yet' d='Shop.Theme.Catalog'}</p>
+            <p class="sr-no-products-text">{l s='Stay tuned! More products will be shown here as they are added.' d='Shop.Theme.Catalog'}</p>
           {/capture}
 
           {include file='errors/not-found.tpl' errorContent=$errorContent}
@@ -63,6 +73,7 @@
 
     {block name='product_list_footer'}{/block}
 
-
-    {hook h='displayFooterCategory'}
+    <div class="sr-category-footer">
+      {hook h='displayFooterCategory'}
+    </div>
 {/block}
